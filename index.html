@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FRAMD — Wall Art That Speaks</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- CINEMATIC ELEMENTS -->
+    <div class="noise"></div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker-inner" id="tickerInner">
+            <span>✦ Free shipping on orders above ₹499</span>
+            <span>✦ 500+ designs in stock</span>
+            <span>✦ Premium matte finish</span>
+            <span>✦ Ships within 2–4 days</span>
+            <span>✦ Custom posters available</span>
+            <span>✦ 4.9★ rated by 12,000+ customers</span>
+            <span>✦ Free shipping on orders above ₹499</span>
+            <span>✦ 500+ designs in stock</span>
+            <span>✦ Premium matte finish</span>
+            <span>✦ Ships within 2–4 days</span>
+            <span>✦ Custom posters available</span>
+            <span>✦ 4.9★ rated by 12,000+ customers</span>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="logo">FRAM<span>D</span></a>
+        <ul>
+            <div class="menu-item">
+                <button class="menu-btn">Shop Posters ▽</button>
+
+                <div class="mega-menu">
+                    <div class="column">
+                        <h4>All Posters</h4>
+                        <a href="new-arrivals.html">New Arrivals</a>
+                        <a href="best-selling.html">Best Selling</a>
+                        <a href="devotional.html">Devotional</a>
+                        <a href="motivational.html">Motivational</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Cars & Bikes</h4>
+                        <a href="bikes.html">Bikes</a>
+                        <a href="concept-cars.html">Concept Cars</a>
+                        <a href="solid-cars.html">Solid Cars</a>
+                        <a href="vector-cars.html">Vector Cars</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Sports</h4>
+                        <a href="football.html">Football</a>
+                        <a href="cricket.html">Cricket</a>
+                        <a href="ufc.html">UFC</a>
+                        <a href="f1.html">F1</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Pop Culture</h4>
+                        <a href="marvel.html">Marvel</a>
+                        <a href="dc.html">DC</a>
+                        <a href="movies.html">Movies</a>
+                        <a href="tv-series.html">TV Series</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-btn">Multi Posters Collections ▽</button>
+
+                <div class="mega-menu">
+                    <div class="column">
+                        <h4>Collage Kit</h4>
+                        <a href="50-piece-collage.html">50-Piece Collage Kit</a>
+                        <a href="30-piece-combo.html">30-Piece Combo Set</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Entertainment Split Posters</h4>
+                    </div>
+
+                    <div class="column">
+                        <h4>Split by Pieces</h4>
+                        <a href="2-piece-split.html">2-Piece Split Posters</a>
+                        <a href="3-piece-split.html">3-Piece Split Posters</a>
+                        <a href="5-panel-split.html">5-Panel Split Posters</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Explore ALL</h4>
+                        <a href="marvel-multi.html">Marvel</a>
+                        <a href="dc-multi.html">DC</a>
+                        <a href="movies-multi.html">Movies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-btn">Retro Photo Prints ▽</button>
+
+                <div class="dropdown-menu simple">
+                    <a href="aesthetic-retro.html">Aesthetic Retro Photo Prints</a>
+                    <a href="custom-retro.html">Custom Retro Photo Prints</a>
+                    <a href="pocket-photos.html">Personalized Pocket Photos (Mini Prints)</a>
+                    <a href="custom-photobooth.html">Custom Photobooth Strip</a>
+                </div>
+            </div>
+            <li><a href="#custom">Custom Poster </a></li>
+            <li><a href="#review">Review </a></li>
+            <li><a href="#help">Help Center</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="icon-btn" aria-label="Search" onclick="showToast('Search coming soon!')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Profile" onclick="showToast('User profile coming soon!')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+            </button>
+            <button class="icon-btn nav-cart-icon" id="navCartBtn" onclick="openCart()" aria-label="Cart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
+                <span class="cart-badge" id="cartCount" style="display:none;">0</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-left">
+            <div class="hero-eyebrow">New arrivals — Summer 2025</div>
+            <h1 class="hero-title">Walls that<br>tell your<br><em>story.</em></h1>
+            <p class="hero-desc">Curated wall art for the ones who believe every corner deserves intention. Museum-grade
+                prints, your way.</p>
+            <div class="hero-cta">
+                <a href="#shop" class="btn-primary">Shop Posters</a>
+                <a href="#custom" class="btn-ghost">Custom Prints →</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">500+</div>
+                    <div class="stat-label">Designs</div>
+                </div>
+                <div>
+                    <div class="stat-num">12k</div>
+                    <div class="stat-label">Happy walls</div>
+                </div>
+                <div>
+                    <div class="stat-num">4.9★</div>
+                    <div class="stat-label">Avg. rating</div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-right">
+            <div class="hero-mosaic">
+                <!-- Poster art cells using SVG gradients -->
+                <div class="mosaic-cell">
+                    <img src="assets/hero-serenity.png" alt="Serenity Art" class="poster-art">
+                    <div class="mosaic-overlay"></div>
+                </div>
+                <div class="mosaic-cell">
+                    <img src="assets/hero-f1.png" alt="F1 Racing Art" class="poster-art">
+                    <div class="mosaic-overlay"></div>
+                </div>
+                <div class="mosaic-cell">
+                    <img src="assets/hero-botanical.png" alt="Botanical Art" class="poster-art">
+                    <div class="mosaic-overlay"></div>
+                </div>
+                <div class="mosaic-cell">
+                    <img src="assets/hero-marvel.png" alt="Marvel Art" class="poster-art">
+                    <div class="mosaic-overlay"></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- TRUST BADGES -->
+    <div class="trust">
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+            <div>
+                <div class="trust-label">Free Shipping</div>
+                <div class="trust-sub">On orders above ₹499</div>
+            </div>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+            <div>
+                <div class="trust-label">Premium Quality</div>
+                <div class="trust-sub">Museum-grade matte paper</div>
+            </div>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 8v4l3 3" />
+            </svg>
+            <div>
+                <div class="trust-label">Fast Dispatch</div>
+                <div class="trust-sub">Ships in 2–4 business days</div>
+            </div>
+        </div>
+        <div class="trust-item">
+            <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+                <line x1="4" y1="22" x2="4" y2="15" />
+            </svg>
+            <div>
+                <div class="trust-label">Easy Returns</div>
+                <div class="trust-sub">7-day hassle-free policy</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CATEGORIES -->
+    <section class="categories" id="shop">
+        <div class="section-label reveal">Browse by theme</div>
+        <div class="section-title reveal reveal-delay-1">Shop every <em>mood.</em></div>
+        <div class="cat-grid">
+            <a href="motivational.html" class="cat-card reveal">
+                <div class="cat-img"><img src="assets/cat-motivational.png" alt="Motivational"></div>
+                <div class="cat-details">
+                    <div class="cat-title">Motivational</div>
+                    <p class="cat-desc">Curated quotes and bold typography designed to inspire your workspace.</p>
+                    <div class="cat-link">Explore <span>→</span></div>
+                </div>
+            </a>
+            <a href="marvel.html" class="cat-card reveal">
+                <div class="cat-img"><img src="assets/cat-popculture.png" alt="Pop Culture"></div>
+                <div class="cat-details">
+                    <div class="cat-title">Pop Culture</div>
+                    <p class="cat-desc">From cinematic marvels to timeless movie legends and TV series.</p>
+                    <div class="cat-link">Explore <span>→</span></div>
+                </div>
+            </a>
+            <a href="bikes.html" class="cat-card reveal">
+                <div class="cat-img"><img src="assets/cat-cars-bikes.png" alt="Cars & Bikes"></div>
+                <div class="cat-details">
+                    <div class="cat-title">Cars & Bikes</div>
+                    <p class="cat-desc">Precision engineering meet artistic photography for the enthusiasts.</p>
+                    <div class="cat-link">Explore <span>→</span></div>
+                </div>
+            </a>
+            <a href="football.html" class="cat-card reveal">
+                <div class="cat-img"><img src="assets/cat-sports.png" alt="Sports"></div>
+                <div class="cat-details">
+                    <div class="cat-title">Sports</div>
+                    <p class="cat-desc">High-octane photography capturing the spirit of the game.</p>
+                    <div class="cat-link">Explore <span>→</span></div>
+                </div>
+            </a>
+            <a href="50-piece-collage.html" class="cat-card reveal">
+                <div class="cat-img"><img src="assets/cat-multi-posters.png" alt="Multi Posters"></div>
+                <div class="cat-details">
+                    <div class="cat-title">Multi Posters</div>
+                    <p class="cat-desc">Statement collections and split-art sets for larger wall spaces.</p>
+                    <div class="cat-link">Explore <span>→</span></div>
+                </div>
+            </a>
+            <a href="aesthetic-retro.html" class="cat-card reveal">
+                <div class="cat-img"><img src="assets/cat-retro-prints.png" alt="Retro Prints"></div>
+                <div class="cat-details">
+                    <div class="cat-title">Retro Prints</div>
+                    <p class="cat-desc">Nostalgic film-inspired prints and custom photobooth strips.</p>
+                    <div class="cat-link">Explore <span>→</span></div>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS -->
+    <section class="featured" id="collections">
+        <div class="featured-header">
+            <div>
+                <div class="section-label reveal">Handpicked for you</div>
+                <div class="section-title reveal reveal-delay-1">Best <em>sellers.</em></div>
+            </div>
+            <a href="#" class="btn-ghost reveal">View all →</a>
+        </div>
+        <div class="product-grid">
+
+            <div class="product-card reveal">
+                <div class="product-img-wrap">
+                    <span class="product-badge">Best Seller</span>
+                    <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#0a0a0a" />
+                                <stop offset="60%" stop-color="#1a1a1a" />
+                                <stop offset="100%" stop-color="#b48c56" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="240" height="320" fill="url(#p1)" />
+                        <circle cx="120" cy="140" r="70" fill="none" stroke="rgba(180,140,86,0.35)"
+                            stroke-width="1.5" />
+                        <circle cx="120" cy="140" r="45" fill="none" stroke="rgba(180,140,86,0.2)" stroke-width="1" />
+                        <text x="120" y="152" font-family="serif" font-size="14" fill="rgba(180,140,86,0.8)"
+                            text-anchor="middle" letter-spacing="2">ABSTRACT</text>
+                        <text x="120" y="240" font-family="Georgia" font-size="11" fill="rgba(255,255,255,0.3)"
+                            text-anchor="middle" letter-spacing="4">NO. 001</text>
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Orbital Serenity</div>
+                <div class="product-meta">
+                    <div class="product-price"><span class="original">₹349</span>₹249</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="199">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="249">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="349">A3</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-1">
+                <div class="product-img-wrap">
+                    <span class="product-badge">New</span>
+                    <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="p2" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#1a1040" />
+                                <stop offset="100%" stop-color="#b48c56" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="240" height="320" fill="url(#p2)" />
+                        <rect x="30" y="30" width="180" height="260" fill="none" stroke="rgba(255,255,255,0.1)"
+                            stroke-width="1" />
+                        <text x="120" y="145" font-family="serif" font-size="72" fill="rgba(180,140,86,0.7)"
+                            text-anchor="middle" font-weight="bold">F1</text>
+                        <line x1="60" y1="170" x2="180" y2="170" stroke="rgba(255,255,255,0.15)" stroke-width="1" />
+                        <text x="120" y="195" font-family="Georgia" font-size="10" fill="rgba(255,255,255,0.4)"
+                            text-anchor="middle" letter-spacing="5">GRAND PRIX</text>
+                        <text x="120" y="260" font-family="Georgia" font-size="9" fill="rgba(180,140,86,0.4)"
+                            text-anchor="middle" letter-spacing="3">2025</text>
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Grand Prix 2025</div>
+                <div class="product-meta">
+                    <div class="product-price">₹299</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="249">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="299">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="399">A3</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-2">
+                <div class="product-img-wrap">
+                    <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <radialGradient id="p3" cx="60%" cy="30%">
+                                <stop offset="0%" stop-color="#d5c3b8" />
+                                <stop offset="70%" stop-color="#e5e2dc" />
+                                <stop offset="100%" stop-color="#1a1a1a" />
+                            </radialGradient>
+                        </defs>
+                        <rect width="240" height="320" fill="url(#p3)" />
+                        <ellipse cx="120" cy="160" rx="65" ry="85" fill="rgba(26,26,26,0.08)"
+                            stroke="rgba(26,26,26,0.25)" stroke-width="1.5" />
+                        <text x="120" y="145" font-family="Georgia" font-size="16" fill="rgba(26,26,26,0.6)"
+                            text-anchor="middle" letter-spacing="2">BOTANICAL</text>
+                        <text x="120" y="180" font-family="Georgia" font-size="28" fill="rgba(26,26,26,0.8)"
+                            text-anchor="middle" font-style="italic">Flora</text>
+                        <text x="120" y="250" font-family="Georgia" font-size="9" fill="rgba(26,26,26,0.3)"
+                            text-anchor="middle" letter-spacing="4">COLLECTION</text>
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Botanical Flora</div>
+                <div class="product-meta">
+                    <div class="product-price"><span class="original">₹299</span>₹199</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="149">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="199">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="299">A3</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal reveal-delay-3">
+                <div class="product-img-wrap">
+                    <span class="product-badge">Trending</span>
+                    <svg viewBox="0 0 240 320" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="p4" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#0d0d0d" />
+                                <stop offset="100%" stop-color="#0a0a0a" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="240" height="320" fill="url(#p4)" />
+                        <polygon points="120,50 200,200 40,200" fill="none" stroke="rgba(180,140,86,0.4)"
+                            stroke-width="2" />
+                        <polygon points="120,80 180,200 60,200" fill="rgba(180,140,86,0.05)" />
+                        <text x="120" y="250" font-family="Georgia" font-size="22" fill="rgba(255,255,255,0.85)"
+                            text-anchor="middle" font-weight="bold">MARVEL</text>
+                        <text x="120" y="274" font-family="Georgia" font-size="9" fill="rgba(180,140,86,0.5)"
+                            text-anchor="middle" letter-spacing="5">UNIVERSE</text>
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Marvel Universe</div>
+                <div class="product-meta">
+                    <div class="product-price">₹279</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="229">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="279">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="379">A3</button>
+                </div>
+            </div>
+
+            <!-- ROW 2 -->
+            <div class="product-card reveal">
+                <div class="product-img-wrap">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#eee" />
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Cyber Tokyo Night</div>
+                <div class="product-meta">
+                    <div class="product-price">₹349</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="299">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="349">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="449">A3</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <div class="product-img-wrap">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#eee" />
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Sahara Sands</div>
+                <div class="product-meta">
+                    <div class="product-price">₹249</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="199">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="249">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="349">A3</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <div class="product-img-wrap">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#eee" />
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Zen Botanical</div>
+                <div class="product-meta">
+                    <div class="product-price">₹199</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="149">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="199">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="299">A3</button>
+                </div>
+            </div>
+
+            <div class="product-card reveal">
+                <div class="product-img-wrap">
+                    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="100%" height="100%" fill="#eee" />
+                    </svg>
+                    <div class="product-hover-overlay">
+                        <button class="quick-add" onclick="addToCart(this)">Add to Bag</button>
+                    </div>
+                </div>
+                <div class="product-name">Abstract Gold</div>
+                <div class="product-meta">
+                    <div class="product-price">₹299</div>
+                </div>
+                <div class="size-picker">
+                    <button class="size-btn" onclick="selectSize(this)" data-price="249">A5</button>
+                    <button class="size-btn active" onclick="selectSize(this)" data-price="299">A4</button>
+                    <button class="size-btn" onclick="selectSize(this)" data-price="399">A3</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="banner-strip" id="custom">
+        <div class="banner-text">
+            <div class="banner-eyebrow">✦ Personalized — Just for you</div>
+            <h2 class="banner-title">Make it<br>truly <em>yours.</em></h2>
+            <p class="banner-body">Upload your photo, pick a size, and we'll turn your memories into art. Perfect gift.
+                Perfect wall.</p>
+            <a href="#" class="btn-light" onclick="showToast('Custom poster builder coming soon!')">Start Creating →</a>
+        </div>
+        <div class="banner-visual">
+            <div class="banner-poster-stack">
+                <div class="b-poster" style="background:linear-gradient(135deg,#e5e2dc,#9a948c)">
+                    <svg width="100%" height="100%" viewBox="0 0 200 260"><text x="100" y="140" font-family="serif"
+                            font-size="13" fill="rgba(26,26,26,0.5)" text-anchor="middle">YOUR PHOTO</text></svg>
+                </div>
+                <div class="b-poster" style="background:linear-gradient(135deg,#b48c56,#1a1a1a)">
+                    <svg width="100%" height="100%" viewBox="0 0 200 260"><text x="100" y="140" font-family="serif"
+                            font-size="13" fill="rgba(255,255,255,0.5)" text-anchor="middle">+ CUSTOM TEXT</text></svg>
+                </div>
+                <div class="b-poster" style="background:linear-gradient(135deg,#fdfbf7,#b48c56)">
+                    <svg width="100%" height="100%" viewBox="0 0 200 260"><text x="100" y="135" font-family="Georgia"
+                            font-size="20" fill="rgba(26,26,26,0.7)" text-anchor="middle" font-style="italic">=
+                            Perfect</text><text x="100" y="158" font-family="Georgia" font-size="9"
+                            fill="rgba(26,26,26,0.5)" text-anchor="middle" letter-spacing="3">POSTER</text></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COLLECTIONS MEGA -->
+    <section class="collections-mega">
+        <div class="section-label reveal">Curated sets</div>
+        <div class="section-title reveal reveal-delay-1">Multi-panel <em>collections.</em></div>
+        <div class="mega-grid">
+            <div class="mega-cell tall reveal">
+                <div class="mega-inner">
+                    <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                        <defs>
+                            <radialGradient id="mg1" cx="40%" cy="40%">
+                                <stop offset="0%" stop-color="#1a1040" />
+                                <stop offset="100%" stop-color="#0d0d0d" />
+                            </radialGradient>
+                        </defs>
+                        <rect width="500" height="500" fill="url(#mg1)" />
+                        <circle cx="250" cy="200" r="120" fill="none" stroke="rgba(180,140,86,0.2)" stroke-width="1" />
+                        <circle cx="250" cy="200" r="80" fill="none" stroke="rgba(180,140,86,0.15)" stroke-width="1" />
+                        <circle cx="250" cy="200" r="40" fill="rgba(180,140,86,0.1)" />
+                        <text x="250" y="360" font-family="Georgia" font-size="32" fill="rgba(180,140,86,0.9)"
+                            text-anchor="middle" font-weight="bold">3-PANEL</text>
+                        <text x="250" y="395" font-family="Georgia" font-size="12" fill="rgba(255,255,255,0.3)"
+                            text-anchor="middle" letter-spacing="5">SPLIT ART</text>
+                    </svg>
+                    <div class="mega-label">
+                        <div class="mega-name">3-Panel Split Art</div>
+                        <div class="mega-sub">From ₹699</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-cell reveal reveal-delay-1">
+                <div class="mega-inner">
+                    <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                        <defs>
+                            <linearGradient id="mg2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#b48c56" />
+                                <stop offset="100%" stop-color="#d5c3b8" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="240" fill="url(#mg2)" />
+                        <text x="150" y="105" font-family="serif" font-size="52" fill="rgba(10,10,10,0.6)"
+                            text-anchor="middle">🎞</text>
+                        <text x="150" y="160" font-family="Georgia" font-size="15" fill="rgba(10,10,10,0.8)"
+                            text-anchor="middle" font-weight="bold">RETRO PRINTS</text>
+                    </svg>
+                    <div class="mega-label">
+                        <div class="mega-name">Retro Photo Prints</div>
+                        <div class="mega-sub">From ₹149</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-cell reveal reveal-delay-2">
+                <div class="mega-inner">
+                    <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                        <defs>
+                            <linearGradient id="mg3" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#e5e2dc" />
+                                <stop offset="100%" stop-color="#1a1a1a" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="240" fill="url(#mg3)" />
+                        <rect x="40" y="30" width="220" height="180" fill="none" stroke="rgba(255,255,255,0.2)"
+                            stroke-width="1" />
+                        <text x="150" y="120" font-family="serif" font-size="40" fill="rgba(255,255,255,0.7)"
+                            text-anchor="middle">🖼</text>
+                        <text x="150" y="170" font-family="Georgia" font-size="12" fill="rgba(255,255,255,0.5)"
+                            text-anchor="middle" letter-spacing="4">COLLAGE KIT</text>
+                    </svg>
+                    <div class="mega-label">
+                        <div class="mega-name">50-Piece Collage Kit</div>
+                        <div class="mega-sub">From ₹1,299</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-cell reveal reveal-delay-1">
+                <div class="mega-inner">
+                    <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                        <defs>
+                            <radialGradient id="mg4" cx="50%" cy="50%">
+                                <stop offset="0%" stop-color="#0a0a0a" />
+                                <stop offset="100%" stop-color="#b48c56" />
+                            </radialGradient>
+                        </defs>
+                        <rect width="300" height="240" fill="url(#mg4)" />
+                        <text x="150" y="110" font-family="serif" font-size="52" fill="rgba(255,255,255,0.7)"
+                            text-anchor="middle">🏎</text>
+                        <text x="150" y="165" font-family="Georgia" font-size="12" fill="rgba(180,140,86,0.7)"
+                            text-anchor="middle" letter-spacing="4">5-PANEL CARS</text>
+                    </svg>
+                    <div class="mega-label">
+                        <div class="mega-name">5-Panel Car Series</div>
+                        <div class="mega-sub">From ₹999</div>
+                    </div>
+                </div>
+            </div>
+            <div class="mega-cell reveal reveal-delay-2">
+                <div class="mega-inner">
+                    <svg viewBox="0 0 300 240" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
+                        <defs>
+                            <linearGradient id="mg5" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0%" stop-color="#d5c3b8" />
+                                <stop offset="100%" stop-color="#e5e2dc" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="300" height="240" fill="url(#mg5)" />
+                        <text x="150" y="110" font-family="serif" font-size="50" fill="rgba(26,26,26,0.6)"
+                            text-anchor="middle">📸</text>
+                        <text x="150" y="167" font-family="Georgia" font-size="11" fill="rgba(26,26,26,0.5)"
+                            text-anchor="middle" letter-spacing="4">PHOTOBOOTH</text>
+                    </svg>
+                    <div class="mega-label">
+                        <div class="mega-name">Photobooth Strips</div>
+                        <div class="mega-sub">From ₹199</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how">
+        <div class="section-label reveal">The process</div>
+        <div class="section-title reveal reveal-delay-1">From screen to <em>wall</em> in days.</div>
+        <div class="how-steps">
+            <div class="step reveal">
+                <div class="step-num">01</div>
+                <div class="step-title">Browse & Pick</div>
+                <div class="step-body">Explore 500+ designs across every theme imaginable. Filter by mood, size, or
+                    style.</div>
+            </div>
+            <div class="step reveal reveal-delay-1">
+                <div class="step-num">02</div>
+                <div class="step-title">Choose Your Size</div>
+                <div class="step-body">A4, A3, or A2 — we print on thick, premium matte paper that commands a room.
+                </div>
+            </div>
+            <div class="step reveal reveal-delay-2">
+                <div class="step-num">03</div>
+                <div class="step-title">We Print & Pack</div>
+                <div class="step-body">Every order is roll-packed in a protective tube to arrive wrinkle-free and
+                    perfect.</div>
+            </div>
+            <div class="step reveal reveal-delay-3">
+                <div class="step-num">04</div>
+                <div class="step-title">Hang & Love</div>
+                <div class="step-body">Arrives in 2–4 days. Tear off the packaging, hang it up, and transform your
+                    space.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <div class="section-label reveal">Real customers</div>
+        <div class="section-title reveal reveal-delay-1">12,000+ happy <em>walls.</em></div>
+        <div class="testi-grid">
+            <div class="testi-card reveal">
+                <div class="stars">★★★★★</div>
+                <div class="testi-quote">"</div>
+                <p class="testi-text">Got the 3-panel F1 set and my room literally became a different place. The print
+                    quality is insane for the price. Already ordered two more sets.</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background:#b48c56"></div>
+                    <div>
+                        <div>Arjun S.</div>
+                        <div style="font-size:10px;color:var(--muted);margin-top:2px">Thrissur · Verified buyer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card reveal reveal-delay-1">
+                <div class="stars">★★★★★</div>
+                <div class="testi-quote">"</div>
+                <p class="testi-text">Ordered a custom retro print for my best friend's birthday and she cried. The
+                    colours came out so rich and warm, exactly like the preview. Highly recommend.</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background:#e5e2dc"></div>
+                    <div>
+                        <div>Priya K.</div>
+                        <div style="font-size:10px;color:var(--muted);margin-top:2px">Thrissur · Verified buyer</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card reveal reveal-delay-2">
+                <div class="stars">★★★★★</div>
+                <div class="testi-quote">"</div>
+                <p class="testi-text">Shipped in 3 days to Delhi. The tube packaging was solid — no damage at all. The
+                    Marvel 5-panel looks amazing on my wall. This is now my go-to for every poster.</p>
+                <div class="testi-author">
+                    <div class="testi-avatar" style="background:#d5c3b8"></div>
+                    <div>
+                        <div>Rohit M.</div>
+                        <div style="font-size:10px;color:var(--muted);margin-top:2px">Thrissur · Verified buyer</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-inner">
+            <div class="section-label" style="justify-content:center;display:flex">Stay in the loop</div>
+            <h2 class="newsletter-title reveal">Get <em>first access</em> to new drops.</h2>
+            <p class="newsletter-sub reveal">New designs every week. Exclusive discounts for subscribers. No spam, ever.
+            </p>
+            <div class="newsletter-form reveal">
+                <input type="email" placeholder="your@email.com">
+                <button onclick="showToast('You\'re subscribed! ✦')">Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="about">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo" style="color:var(--cream)">FRAM<span>D</span></a>
+                <p>Premium wall art for spaces that refuse to be ordinary. Every poster is printed with intention,
+                    shipped with care.</p>
+                <div class="social-links">
+                    <a href="#" class="social-link">in</a>
+                    <a href="#" class="social-link">tw</a>
+                    <a href="#" class="social-link">ig</a>
+                    <a href="#" class="social-link">yt</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Shop</h4>
+                <ul>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Best Sellers</a></li>
+                    <li><a href="#">Pop Culture</a></li>
+                    <li><a href="#">Sports</a></li>
+                    <li><a href="#">Cars & Bikes</a></li>
+                    <li><a href="#">Devotional</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Custom</h4>
+                <ul>
+                    <li><a href="#">Custom Poster</a></li>
+                    <li><a href="#">3-Panel Custom</a></li>
+                    <li><a href="#">Retro Prints</a></li>
+                    <li><a href="#">Photobooth Strip</a></li>
+                    <li><a href="#">Bulk Orders</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Help</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 FRAMD. All rights reserved.</p>
+            <p>Made with ♥ in Thrissur</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Images used in this website excluding the poster is generated using AI</p>
+        </div>
+    </footer>
+
+    <!-- Floating Cart -->
+    <button class="floating-cart" onclick="openCart()" id="floatCart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+            <line x1="3" y1="6" x2="21" y2="6" />
+            <path d="M16 10a4 4 0 01-8 0" />
+        </svg>
+        <span class="cart-badge" id="cartCount">0</span>
+    </button>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCart()"></div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-drawer-header">
+            <div class="cart-drawer-title">Your Bag</div>
+            <button class="cart-close-btn" onclick="closeCart()">✕</button>
+        </div>
+        <div class="cart-drawer-body" id="cartBody">
+            <div class="cart-empty" id="cartEmpty">
+                <div class="cart-empty-icon">🛍</div>
+                <p>Your bag is empty.</p>
+                <span>Add some posters to get started!</span>
+            </div>
+
+            <!-- Cart View -->
+            <div id="cartView">
+                <ul class="cart-items-list" id="cartItemsList"></ul>
+            </div>
+
+            <!-- Checkout View (Shipping Form) -->
+            <div id="checkoutView" style="display:none">
+                <div class="checkout-header-mini">
+                    <button class="back-to-cart" onclick="cancelCheckout()">← Back to Bag</button>
+                    <h3>Shipping Details</h3>
+                </div>
+                <div class="shipping-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="custName" placeholder="Enter your name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number (WhatsApp)</label>
+                        <input type="number" id="custPhone" placeholder="10-digit mobile number">
+                    </div>
+                    <div class="form-group">
+                        <label>Complete Address</label>
+                        <textarea id="custAddress" placeholder="House no, Street, City, Pincode" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cart-drawer-footer" id="cartFooter" style="display:none">
+            <div class="cart-total-row">
+                <span>Total</span>
+                <span id="cartTotal">₹0</span>
+            </div>
+            <button class="cart-checkout-btn" id="proceedBtn" onclick="showCheckout()">Proceed to Checkout →</button>
+            <button class="cart-checkout-btn" id="confirmBtn" onclick="completeOrder()" style="display:none">Complete
+                Order via WhatsApp ✦</button>
+        </div>
+    </div>
+
+    <script src="images.js"></script>
+    <script src="prices.js"></script>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
