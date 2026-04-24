@@ -1,4 +1,4 @@
-// Scroll reveal
+﻿// Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
@@ -238,7 +238,7 @@ window.completeOrder = function() {
         return `• ${item.name} (${item.size}) - ₹${item.price}`;
     }).join('\n');
 
-    const storeNumber = PRICES.WHATSAPP_NUMBER || "919000000000";
+    const storeNumber = PRICES.WHATSAPP_NUMBER || "9895360056";
     const message = `*NEW ORDER FROM FRAMD*\n\n` +
         `*Customer Details:*\n` +
         `Name: ${name}\n` +
