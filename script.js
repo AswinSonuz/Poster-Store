@@ -402,29 +402,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// ── Launch Overlay Logic ──────────────────────────────
-function closeLaunchOverlay() {
-    const overlay = document.getElementById('launchOverlay');
-    if (overlay) {
-        overlay.classList.add('hidden');
-        document.body.style.overflow = 'auto';
-    }
-}
 
-function subscribeNotify() {
-    const email = document.getElementById('notifyEmail').value;
-    if (email && email.includes('@')) {
-        showToast('Thank you! We will notify you at launch. ✦');
-        setTimeout(() => closeLaunchOverlay(), 2000);
-    } else {
-        showToast('Please enter a valid email address.');
-    }
-}
-
-function initApp() {
-    const overlay = document.getElementById('launchOverlay');
-    if (overlay && !overlay.classList.contains('hidden')) {
-        document.body.style.overflow = 'hidden';
-    }
-}
-initApp();
