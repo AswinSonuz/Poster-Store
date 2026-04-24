@@ -13,6 +13,36 @@
 </head>
 
 <body>
+    <!-- Launching Soon Overlay -->
+    <div class="launch-overlay" id="launchOverlay">
+        <div class="launch-content">
+            <div class="launch-label reveal">Coming Summer 2025</div>
+            <h1 class="launch-title reveal">The Gallery is<br>Opening <em>Soon.</em></h1>
+            <p class="launch-desc reveal">Fine-art posters curated for the modern space. Leave your name below to be the first to know when we go live.</p>
+            
+            <div class="launch-form reveal">
+                <input type="email" id="notifyEmail" placeholder="Enter your email address" aria-label="Email Address">
+                <button onclick="subscribeNotify()" class="launch-btn">Notify Me <span>→</span></button>
+            </div>
+            
+            <div class="launch-meta reveal">
+                <div class="meta-item">
+                    <span>95+</span>
+                    <label>Exclusive Designs</label>
+                </div>
+                <div class="meta-item">
+                    <span>Museum</span>
+                    <label>Quality Prints</label>
+                </div>
+            </div>
+
+            <!-- Preview Dismissal (For testing/owner) -->
+            <button class="launch-preview-btn" onclick="closeLaunchOverlay()">
+                Preview the Website →
+            </button>
+        </div>
+    </div>
+
     <!-- CINEMATIC ELEMENTS -->
     <div class="noise"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -40,95 +70,116 @@
     <nav>
         <a href="#" class="logo">FRAM<span>D</span></a>
         <ul>
-  <div class="menu-item">
-    <button class="menu-btn">Shop Posters ▽</button>
-
-    <div class="mega-menu">
-      <div class="column">
-        <h4>All Posters</h4>
-        <a href="new-arrivals.html">New Arrivals</a>
-        <a href="best-selling.html">Best Selling</a>
-        <a href="devotional.html">Devotional</a>
-        <a href="motivational.html">Motivational</a>
-      </div>
-
-      <div class="column">
-        <h4>Cars & Bikes</h4>
-        <a href="bikes.html">Bikes</a>
-        <a href="concept-cars.html">Concept Cars</a>
-        <a href="solid-cars.html">Solid Cars</a>
-        <a href="vector-cars.html">Vector Cars</a>
-      </div>
-
-      <div class="column">
-        <h4>Sports</h4>
-        <a href="football.html">Football</a>
-        <a href="cricket.html">Cricket</a>
-        <a href="ufc.html">UFC</a>
-        <a href="f1.html">F1</a>
-      </div>
-
-      <div class="column">
-        <h4>Pop Culture</h4>
-        <a href="marvel.html">Marvel</a>
-        <a href="dc.html">DC</a>
-        <a href="movies.html">Movies</a>
-        <a href="tv-series.html">TV Series</a>
-      </div>
-    </div>
-  </div>
             <div class="menu-item">
-  <button class="menu-btn">Multi Posters Collections ▽</button>
+                <button class="menu-btn">Shop Posters ▽</button>
 
-  <div class="mega-menu">
-    <div class="column">
-      <h4>Collage Kit</h4>
-      <a href="50-piece-collage.html">50-Piece Collage Kit</a>
-      <a href="30-piece-combo.html">30-Piece Combo Set</a>
-    </div>
+                <div class="mega-menu">
+                    <div class="column">
+                        <h4>All Posters</h4>
+                        <a href="new-arrivals.html">New Arrivals</a>
+                        <a href="best-selling.html">Best Selling</a>
+                        <a href="devotional.html">Devotional</a>
+                        <a href="motivational.html">Motivational</a>
+                    </div>
 
-    <div class="column">
-      <h4>Entertainment Split Posters</h4>
-    </div>
+                    <div class="column">
+                        <h4>Cars & Bikes</h4>
+                        <a href="bikes.html">Bikes</a>
+                        <a href="concept-cars.html">Concept Cars</a>
+                        <a href="solid-cars.html">Solid Cars</a>
+                        <a href="vector-cars.html">Vector Cars</a>
+                    </div>
 
-    <div class="column">
-      <h4>Split by Pieces</h4>
-      <a href="2-piece-split.html">2-Piece Split Posters</a>
-      <a href="3-piece-split.html">3-Piece Split Posters</a>
-      <a href="5-panel-split.html">5-Panel Split Posters</a>
-    </div>
+                    <div class="column">
+                        <h4>Sports</h4>
+                        <a href="football.html">Football</a>
+                        <a href="cricket.html">Cricket</a>
+                        <a href="ufc.html">UFC</a>
+                        <a href="f1.html">F1</a>
+                    </div>
 
-    <div class="column">
-      <h4>Explore ALL</h4>
-      <a href="marvel-multi.html">Marvel</a>
-      <a href="dc-multi.html">DC</a>
-      <a href="movies-multi.html">Movies</a>
-    </div>
-  </div>
-</div>
+                    <div class="column">
+                        <h4>Pop Culture</h4>
+                        <a href="marvel.html">Marvel</a>
+                        <a href="dc.html">DC</a>
+                        <a href="movies.html">Movies</a>
+                        <a href="tv-series.html">TV Series</a>
+                    </div>
+                </div>
+            </div>
             <div class="menu-item">
-  <button class="menu-btn">Retro Photo Prints ▽</button>
+                <button class="menu-btn">Multi Posters Collections ▽</button>
 
-  <div class="dropdown-menu simple">
-    <a href="aesthetic-retro.html">Aesthetic Retro Photo Prints</a>
-    <a href="custom-retro.html">Custom Retro Photo Prints</a>
-    <a href="pocket-photos.html">Personalized Pocket Photos (Mini Prints)</a>
-    <a href="custom-photobooth.html">Custom Photobooth Strip</a>
-  </div>
-</div>
+                <div class="mega-menu">
+                    <div class="column">
+                        <h4>Collage Kit</h4>
+                        <a href="50-piece-collage.html">50-Piece Collage Kit</a>
+                        <a href="30-piece-combo.html">30-Piece Combo Set</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Entertainment Split Posters</h4>
+                    </div>
+
+                    <div class="column">
+                        <h4>Split by Pieces</h4>
+                        <a href="2-piece-split.html">2-Piece Split Posters</a>
+                        <a href="3-piece-split.html">3-Piece Split Posters</a>
+                        <a href="5-panel-split.html">5-Panel Split Posters</a>
+                    </div>
+
+                    <div class="column">
+                        <h4>Explore ALL</h4>
+                        <a href="marvel-multi.html">Marvel</a>
+                        <a href="dc-multi.html">DC</a>
+                        <a href="movies-multi.html">Movies</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-item">
+                <button class="menu-btn">Retro Photo Prints ▽</button>
+
+                <div class="dropdown-menu simple">
+                    <a href="aesthetic-retro.html">Aesthetic Retro Photo Prints</a>
+                    <a href="custom-retro.html">Custom Retro Photo Prints</a>
+                    <a href="pocket-photos.html">Personalized Pocket Photos (Mini Prints)</a>
+                    <a href="custom-photobooth.html">Custom Photobooth Strip</a>
+                </div>
+            </div>
             <li><a href="#custom">Custom Poster </a></li>
             <li><a href="#review">Review </a></li>
             <li><a href="#help">Help Center</a></li>
         </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <line x1="4" y1="7" x2="20" y2="7"></line>
+                <line x1="4" y1="12" x2="20" y2="12"></line>
+                <line x1="4" y1="17" x2="20" y2="17"></line>
+            </svg>
+        </button>
+
         <div class="nav-actions">
             <button class="icon-btn" aria-label="Search" onclick="showToast('Search coming soon!')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
             </button>
             <button class="icon-btn" aria-label="Profile" onclick="showToast('User profile coming soon!')">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
             </button>
             <button class="icon-btn nav-cart-icon" id="navCartBtn" onclick="openCart()" aria-label="Cart">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <path d="M16 10a4 4 0 0 1-8 0"></path>
+                </svg>
                 <span class="cart-badge" id="cartCount" style="display:none;">0</span>
             </button>
         </div>
@@ -240,7 +291,10 @@
         </div>
         <div class="footer-bottom">
             <p>© 2025 FRAMD. All rights reserved.</p>
-            <p>Made with ♥ in India</p>
+            <p>Made with ♥ in Thrissur</p>
+        </div>
+        <div class="footer-bottom">
+            <p>Images used in this website excluding the poster is generated using AI</p>
         </div>
     </footer>
 
