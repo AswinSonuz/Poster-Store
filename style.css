@@ -2110,6 +2110,108 @@
         }
     }
 
+    /* PROFESSIONAL CHECKOUT & COUPON STYLES */
+    .order-summary-box {
+        background: rgba(26, 26, 26, 0.03);
+        border-radius: 16px;
+        padding: 24px;
+        margin-bottom: 32px;
+        border: 1px solid rgba(26, 26, 26, 0.05);
+    }
+
+    .order-summary-box h4 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 20px;
+        color: var(--ink);
+    }
+
+    .summary-item {
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        margin-bottom: 12px;
+        color: var(--muted);
+    }
+
+    .summary-item.discount {
+        color: #2e7d32;
+        font-weight: 600;
+    }
+
+    .summary-total-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px dashed rgba(26, 26, 26, 0.1);
+        font-weight: 700;
+        font-size: 18px;
+        color: var(--ink);
+    }
+
+    .coupon-section {
+        margin: 24px 0;
+    }
+
+    .coupon-input-wrap {
+        display: flex;
+        gap: 8px;
+    }
+
+    .coupon-input-wrap input {
+        flex-grow: 1;
+        background: var(--bg);
+        border: 1px solid rgba(26, 26, 26, 0.1);
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 14px;
+        outline: none;
+        transition: border-color 0.3s;
+    }
+
+    .coupon-input-wrap input:focus {
+        border-color: var(--accent);
+    }
+
+    .coupon-input-wrap button {
+        background: var(--ink);
+        color: var(--bg);
+        border: none;
+        padding: 0 20px;
+        border-radius: 8px;
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .coupon-input-wrap button:hover {
+        background: var(--accent);
+    }
+
+    .coupon-msg {
+        font-size: 12px;
+        margin-top: 8px;
+        min-height: 18px;
+    }
+
+    .coupon-msg.success { color: #2e7d32; }
+    .coupon-msg.error { color: #d32f2f; }
+
+    .shipping-form h4 {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 24px;
+        color: var(--ink);
+    }
+
     /* SEARCH OVERLAY */
     .search-overlay {
         position: fixed;

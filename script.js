@@ -1,4 +1,4 @@
-﻿// Scroll reveal
+// Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
@@ -198,7 +198,10 @@ window.closeCart = function() {
 }
 
 // ── Checkout Navigation ────────────────────────────────────────────────────────────
+let appliedCoupon = null;
+
 window.showCheckout = function() {
+    renderSummary();
     document.getElementById('cartView').style.display = 'none';
     document.getElementById('checkoutView').style.display = 'block';
     document.getElementById('proceedBtn').style.display = 'none';
@@ -215,6 +218,89 @@ window.cancelCheckout = function() {
     if (checkoutView) checkoutView.style.display = 'none';
     if (proceedBtn) proceedBtn.style.display = 'block';
     if (confirmBtn) confirmBtn.style.display = 'none';
+    
+    // Optional: clear coupon on cancel
+    // resetCoupon();
+}
+
+function renderSummary() {
+    const summaryDetails = document.getElementById('summaryDetails');
+    const finalTotalEl = document.getElementById('finalTotal');
+    if (!summaryDetails || !finalTotalEl) return;
+
+    let subtotal = 0;
+    cartItems.forEach(item => subtotal += item.price);
+
+    let discountAmount = 0;
+    if (appliedCoupon) {
+        if (appliedCoupon.type === 'percent') {
+            discountAmount = Math.round(subtotal * (appliedCoupon.value / 100));
+        } else if (appliedCoupon.type === 'fixed') {
+            discountAmount = appliedCoupon.value;
+        }
+    }
+
+    const total = Math.max(0, subtotal - discountAmount);
+
+    summaryDetails.innerHTML = `
+        <div class="summary-item">
+            <span>Subtotal (${cartItems.length} items)</span>
+            <span>₹${subtotal}</span>
+        </div>
+        ${appliedCoupon ? `
+        <div class="summary-item discount">
+            <span>Discount (${appliedCoupon.code})</span>
+            <span>-₹${discountAmount}</span>
+        </div>
+        ` : ''}
+    `;
+
+    finalTotalEl.textContent = `₹${total}`;
+}
+
+window.applyCoupon = function() {
+    const input = document.getElementById('couponInput');
+    const msg = document.getElementById('couponMessage');
+    if (!input || !msg) return;
+
+    const code = input.value.trim().toUpperCase();
+    if (!code) {
+        showCouponMsg('Please enter a code.', 'error');
+        return;
+    }
+
+    if (typeof COUPONS !== 'undefined' && COUPONS[code]) {
+        appliedCoupon = { ...COUPONS[code], code: code };
+        renderSummary();
+        showCouponMsg(`Coupon "${code}" applied! ✦`, 'success');
+        input.disabled = true;
+        document.getElementById('applyCouponBtn').textContent = 'Applied';
+        document.getElementById('applyCouponBtn').disabled = true;
+    } else {
+        showCouponMsg('Invalid coupon code.', 'error');
+    }
+}
+
+function showCouponMsg(text, type) {
+    const msg = document.getElementById('couponMessage');
+    msg.textContent = text;
+    msg.className = 'coupon-msg ' + type;
+}
+
+function resetCoupon() {
+    appliedCoupon = null;
+    const input = document.getElementById('couponInput');
+    const btn = document.getElementById('applyCouponBtn');
+    if (input) {
+        input.value = '';
+        input.disabled = false;
+    }
+    if (btn) {
+        btn.textContent = 'Apply';
+        btn.disabled = false;
+    }
+    const msg = document.getElementById('couponMessage');
+    if (msg) msg.textContent = '';
 }
 
 window.completeOrder = function() {
@@ -232,20 +318,33 @@ window.completeOrder = function() {
         return;
     }
 
-    let total = 0;
+    let subtotal = 0;
     let itemsText = cartItems.map(item => {
-        total += item.price;
+        subtotal += item.price;
         return `• ${item.name} (${item.size}) - ₹${item.price}`;
     }).join('\n');
 
-    const storeNumber = PRICES.WHATSAPP_NUMBER || "9895360056";
+    let discountAmount = 0;
+    if (appliedCoupon) {
+        if (appliedCoupon.type === 'percent') {
+            discountAmount = Math.round(subtotal * (appliedCoupon.value / 100));
+        } else if (appliedCoupon.type === 'fixed') {
+            discountAmount = appliedCoupon.value;
+        }
+    }
+
+    const finalTotal = Math.max(0, subtotal - discountAmount);
+
+    const storeNumber = PRICES.WHATSAPP_NUMBER || "919000000000";
     const message = `*NEW ORDER FROM FRAMD*\n\n` +
         `*Customer Details:*\n` +
         `Name: ${name}\n` +
         `Phone: ${phone}\n` +
         `Address: ${address}\n\n` +
         `*Order Summary:*\n${itemsText}\n\n` +
-        `*Total Amount: ₹${total}*\n\n` +
+        `Subtotal: ₹${subtotal}\n` +
+        (appliedCoupon ? `Discount (${appliedCoupon.code}): -₹${discountAmount}\n` : '') +
+        `*Total Amount: ₹${finalTotal}*\n\n` +
         `Please confirm my order! ✧`;
 
     const whatsappUrl = `https://wa.me/${storeNumber}?text=${encodeURIComponent(message)}`;
@@ -258,6 +357,7 @@ window.completeOrder = function() {
         updateCartBadge();
         renderCart();
         closeCart();
+        resetCoupon();
         
         document.getElementById('custName').value = '';
         document.getElementById('custPhone').value = '';

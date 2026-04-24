@@ -13,7 +13,7 @@
 </head>
 
 <body>
-   
+
     <!-- CINEMATIC ELEMENTS -->
     <div class="noise"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -283,7 +283,8 @@
     <div class="search-overlay" id="searchOverlay">
         <div class="search-container">
             <div class="search-header">
-                <input type="text" id="searchInput" placeholder="Search for posters (e.g. Marvel, Cars, Nature)..." autocomplete="off">
+                <input type="text" id="searchInput" placeholder="Search for posters (e.g. Marvel, Cars, Nature)..."
+                    autocomplete="off">
                 <button class="search-close-btn" onclick="closeSearch()">✕</button>
             </div>
             <div class="search-results" id="searchResults">
@@ -322,9 +323,33 @@
             <div id="checkoutView" style="display:none">
                 <div class="checkout-header-mini">
                     <button class="back-to-cart" onclick="cancelCheckout()">← Back to Bag</button>
-                    <h3>Shipping Details</h3>
+                    <h3>Checkout</h3>
                 </div>
+
+                <!-- Order Summary Mini -->
+                <div class="order-summary-box">
+                    <h4>Order Summary</h4>
+                    <div class="summary-details" id="summaryDetails">
+                        <!-- Filled by JS -->
+                    </div>
+                    
+                    <!-- Coupon Section -->
+                    <div class="coupon-section">
+                        <div class="coupon-input-wrap">
+                            <input type="text" id="couponInput" placeholder="Enter coupon code">
+                            <button onclick="applyCoupon()" id="applyCouponBtn">Apply</button>
+                        </div>
+                        <div id="couponMessage" class="coupon-msg"></div>
+                    </div>
+
+                    <div class="summary-total-row">
+                        <span>Total Payable</span>
+                        <span id="finalTotal">₹0</span>
+                    </div>
+                </div>
+
                 <div class="shipping-form">
+                    <h4>Shipping Details</h4>
                     <div class="form-group">
                         <label>Full Name</label>
                         <input type="text" id="custName" placeholder="Enter your name">
@@ -353,6 +378,7 @@
 
     <script src="images.js"></script>
     <script src="prices.js"></script>
+    <script src="coupons.js"></script>
     <script src="script.js" defer></script>
 </body>
 
