@@ -13,7 +13,7 @@
 </head>
 
 <body>
-   
+
     <!-- CINEMATIC ELEMENTS -->
     <div class="noise"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
@@ -849,6 +849,22 @@
         </svg>
         <span class="cart-badge" id="cartCount">0</span>
     </button>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-header">
+                <input type="text" id="searchInput" placeholder="Search for posters (e.g. Marvel, Cars, Nature)..."
+                    autocomplete="off">
+                <button class="search-close-btn" onclick="closeSearch()">✕</button>
+            </div>
+            <div class="search-results" id="searchResults">
+                <div class="search-placeholder">
+                    <p>Start typing to search our collection...</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Toast -->
     <div class="toast" id="toast"></div>

@@ -268,7 +268,12 @@ window.completeOrder = function() {
 }
 
 // Close on Escape key
-document.addEventListener('keydown', e => { if (e.key === 'Escape') closeCart(); });
+document.addEventListener('keydown', e => { 
+    if (e.key === 'Escape') {
+        closeCart(); 
+        closeSearch();
+    }
+});
 
 // Parallax hero
 window.addEventListener('scroll', () => {
@@ -374,6 +379,76 @@ window.addEventListener('scroll', () => {
         });
     }
 })();
+
+// ── Search Logic ──────────────────────────────
+window.openSearch = function() {
+    const overlay = document.getElementById('searchOverlay');
+    if (overlay) {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        setTimeout(() => document.getElementById('searchInput').focus(), 100);
+    }
+}
+
+window.closeSearch = function() {
+    const overlay = document.getElementById('searchOverlay');
+    if (overlay) {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+}
+
+// Global search function
+function handleSearch(query) {
+    const resultsContainer = document.getElementById('searchResults');
+    if (!resultsContainer) return;
+
+    if (!query || query.trim().length < 2) {
+        resultsContainer.innerHTML = '<div class="search-placeholder"><p>Start typing to search our collection...</p></div>';
+        return;
+    }
+
+    const q = query.toLowerCase().trim();
+    const matches = [];
+
+    // Search through PRICES or IMAGES (using PRICES as source of names)
+    if (typeof PRICES !== 'undefined') {
+        for (const name in PRICES) {
+            if (name.toLowerCase().includes(q) && name !== 'WHATSAPP_NUMBER') {
+                matches.push({
+                    name: name,
+                    price: PRICES[name].A4 || PRICES[name].A3 || 0,
+                    image: (typeof IMAGES !== 'undefined' && IMAGES[name]) ? IMAGES[name].src : ''
+                });
+            }
+        }
+    }
+
+    if (matches.length === 0) {
+        resultsContainer.innerHTML = '<div class="search-placeholder"><p>No posters found matching "' + query + '"</p></div>';
+        return;
+    }
+
+    resultsContainer.innerHTML = matches.map(item => `
+        <a href="index.html#products" class="search-result-item" onclick="closeSearch()">
+            <div class="search-result-thumb">
+                ${item.image ? `<img src="${item.image}" alt="${item.name}">` : '🖼️'}
+            </div>
+            <div class="search-result-info">
+                <h4>${item.name}</h4>
+                <span>Starting from ₹${item.price}</span>
+            </div>
+        </a>
+    `).join('');
+}
+
+// Attach search listener
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => handleSearch(e.target.value));
+    }
+});
 
 // ── Custom Cursor Glow Logic ──────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
